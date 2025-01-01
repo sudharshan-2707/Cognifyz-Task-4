@@ -1,0 +1,129 @@
+/* General styling for the login form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  font-family: 'Roboto', sans-serif;
+  transition: background 0.5s ease;
+}
+
+.login-form.summer {
+  background: linear-gradient(to right, #ffedb9, #ffd700);
+}
+.login-form.winter {
+  background: linear-gradient(to right, #d9e6f2, #4a90e2);
+}
+.login-form.monsoon {
+  background: linear-gradient(to right, #bde4e6, #017a74);
+}
+.login-form.spring {
+  background: linear-gradient(to right, #fde6e8, #f06292);
+}
+.login-form.autumn {
+  background: linear-gradient(to right, #fbd1b7, #f57c00);
+}
+
+/* Form container */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Input container */
+form div {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Labels */
+label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  color: #333;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+  font-size: 14px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #4caf50;
+  box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
+  outline: none;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"] {
+  background: #4caf50;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+button[type="button"] {
+  background: #f44336;
+  color: white;
+  margin-top: 10px;
+}
+
+button[type="button"]:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
+}
+
+/* Error messages */
+span {
+  color: red;
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+  }
+
+  input, button {
+    font-size: 12px;
+    padding: 10px;
+  }
+}

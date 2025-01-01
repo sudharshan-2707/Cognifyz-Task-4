@@ -1,0 +1,13 @@
+/* src/components/Animations/AutumnAnimation.css */
+.autumn-animation {
+    animation: leaf-fall 2s infinite;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  @keyframes leaf-fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(20px); }
+  }
+  

@@ -1,0 +1,102 @@
+/* src/components/CalendarPage.css */
+.calendar-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  transition: background 0.5s;
+}
+
+.calendar-page.summer { background: linear-gradient(to right, #ffeb3b, #ff9800); }
+.calendar-page.winter { background: linear-gradient(to right, #bbdefb, #0d47a1); }
+.calendar-page.spring { background: linear-gradient(to right, #f8bbd0, #f48fb1); }
+.calendar-page.autumn { background: linear-gradient(to right, #ffab91, #ff7043); }
+.calendar-page.monsoon { background: linear-gradient(to right, #80deea, #00796b); }
+
+.calendar-nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.calendar-display {
+  margin-top: 50px;
+  padding: 20px;
+  width: 80%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.calendar-display table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar-display th, .calendar-display td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.calendar-display th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.season-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.animation-element {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+@keyframes animate {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100vh); }
+}
+
+.fixed-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  animation: none;
+  z-index: -1;
+}
+
+.summer .animation-element.fixed-top {
+  object-fit: cover;
+}
+
+.spring .animation-element {
+  object-fit: cover;
+  animation: animate-small 10s linear infinite;
+}
+
+@keyframes animate-small {
+  0% { transform: translateY(0) scale(0.2); }
+  100% { transform: translateY(100vh) scale(0.2); }
+}
+
+.winter .animation-element,
+.autumn .animation-element,
+.monsoon .animation-element {
+  animation-duration: 20s;
+  object-fit: cover;
+}

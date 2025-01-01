@@ -1,0 +1,28 @@
+/* src/components/MonthTile.css */
+.month-tile {
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+    margin: 5px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-clip: padding-box;
+    cursor: pointer;
+  }
+  
+  .month-tile.summer { background: #ffeb3b; }
+  .month-tile.winter { background: #bbdefb; }
+  .month-tile.spring { background: #f8bbd0; }
+  .month-tile.autumn { background: #ffab91; }
+  .month-tile.monsoon { background: #80deea; }
+  
+  .month-tile.selected {
+    border: 3px solid blue;
+    transform: scale(1.05);
+  }
+  
+  .month-name {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+  

@@ -1,0 +1,13 @@
+/* src/components/Animations/WinterAnimation.css */
+.winter-animation {
+    animation: snow-fall 3s infinite;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  @keyframes snow-fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(20px); }
+  }
+  
